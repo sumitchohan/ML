@@ -27,7 +27,9 @@ USER root
 #    tzdata \
 #    unzip \
 #    nano \
- #   && rm -rf /var/lib/apt/lists/*
+#   && rm -rf /var/lib/apt/lists/*
+
+RUN pip install numpy scipy matplotlib pandas sklearn
 
 # Switch back to jovyan to avoid accidental container runs as root
 USER $NB_UID
